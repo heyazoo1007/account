@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import static com.example.Account.dto.AccountDto.fromEntity;
@@ -37,9 +38,7 @@ public class AccountService {
 
         validateCreateAccount(accountUser);
 
-        String newAccountNumber = accountRepository.findFirstByOrderByIdDesc()
-                .map(account -> (Integer.parseInt(account.getAccountNumber())) + 1 + "")
-                .orElse("1000000000");
+        String newAccountNumber = createAccountNums();
 
         return fromEntity(
                 accountRepository.save(Account.builder()
@@ -91,6 +90,20 @@ public class AccountService {
         if (accountRepository.countByAccountUser(accountUser) >= 10) {
             throw new AccountException(MAX_ACCOUNT_PER_USER_10);
         }
+    }
+
+    private String createAccountNums() {
+        Random random = new Random();
+        String accountNums = "";
+        do {
+            for (int i = 0; i < 10; i++) {
+                accountNums += String.valueOf(random.nextInt(9));
+            }
+
+            System.out.println(accountNums);
+        } while (accountRepository.existsAccountByAccountNumber(accountNums));
+
+        return accountNums;
     }
 
     private void validateDeleteAccount(AccountUser accountUser, Account account) {
