@@ -15,7 +15,7 @@ Java와 Spring Boot를 이용한 계좌 관리 시스템을 만드는 프로젝�
 
 ## 🖥️ 주요기능 
 
-### 💰 계좌 관련 API
+### 💰 계좌 관련 API - [상세정보 - WIKI](https://github.com/heyazoo1007/Account/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(Account))
 
 계좌 생성 
 * 유일한 10자리 계좌번호 랜덤으로 생성
@@ -31,7 +31,7 @@ Java와 Spring Boot를 이용한 계좌 관리 시스템을 만드는 프로젝�
 계좌 확인 
 * 사용자 없는 경우 검증 <br>
 
-### 💸 거래 관련 API 
+### 💸 거래 관련 API - [상세정보 - WIKI]()
 잔액 사용 
 * 사용자 없는 경우 검증 
 * 사용자와 계좌 소유주가 다른 경우 검증
