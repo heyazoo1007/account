@@ -15,7 +15,9 @@ Java와 Spring Boot를 이용한 계좌 관리 시스템을 만드는 프로젝�
 
 ## 🖥️ 주요기능 
 
-### Custom Exception Handling 
+### Custom Exception Handling - [상세정보 - WIKI](https://github.com/heyazoo1007/Account/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(Exception))
+* 예외처리는 @ExceptionHandler를 이용해 구현 
+* 커스텀 예외처리 Enum(ErrorCode)을 이용해서 구현
 
 ### 💰 계좌 관련 API - [상세정보 - WIKI](https://github.com/heyazoo1007/Account/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(Account))
 
